@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Riva Zackery</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #38bdf8;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #facc15;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 20px;
+            display: block;
+            margin: 20px auto; 
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 40px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 40px;
+        }
+
+        /* Tabs */
+        .tab {
+            overflow: hidden;
+            border-bottom: 2px solid #38bdf8;
+            margin: 20px;
+        }
+
+        .tab button {
+            background-color: #0f172a;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            transition: 0.3s;
+            color: white;
+            font-size: 16px;
+        }
+
+        .tab button:hover {
+            background-color: #1e293b;
+        }
+
+        .tab button.active {
+            border-bottom: 3px solid #facc15;
+            font-weight: bold;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+        }
+
+        .tabcontent.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Riva Zackery</h1>
+<img src="https://wiki.d-addicts.com/images/f/f9/Seulgi.jpg" alt="Riva Zackery"/>
+
+<div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'Bibliography')">Bibliography</button>
+    <button class="tablinks" onclick="openTab(event, 'Hobbies')">Hobbies</button>
+    <button class="tablinks" onclick="openTab(event, 'FunFacts')">Fun Facts</button>
+</div>
+
+<div id="Bibliography" class="tabcontent active">
+    <p>
+        I grew up in the slums of Mumbai, where access to education and technology was limited. From a young age, I was fascinated by computers, inspired by stories of innovators like Bill Gates. Without owning a computer, I practiced on a discarded keyboard and earned brief daily access to a cyber café by working there.
+    </p>
+    <p>
+        Despite financial hardships, frequent rejections, and unstable living conditions, I taught myself to code through free online resources. Over time, I built small websites and applications, eventually gaining recognition through a competitive coding fellowship. My journey reflects resilience, self-learning, and my determination to rise above my circumstances through technology.
+    </p>
+</div>
+
+<div id="Hobbies" class="tabcontent">
+    <h3>Pets</h3>
+    <ul>
+        <li>Stray Dog Bruno</li>
+    </ul>
+
+    <h3>Dream Job</h3>
+    <ul>
+        <li>Software engineer</li>
+        <li>Founder of his own tech startup</li>
+    </ul>
+
+    <h3>Games I Play</h3>
+    <ul>
+        <li>Free Fire</li>
+        <li>Chess</li>
+        <li>Pubg Mobile</li>
+    </ul>
+</div>
+
+<div id="FunFacts" class="tabcontent">
+    <ul>
+        <li>She learned to type by practicing on a broken keyboard that wasn’t connected to a computer.</li>
+        <li>She used to study coding late at night under a streetlight during power cuts.</li>
+        <li>Her first successful program printed “Hello, World!” — and she celebrated like she built an app.</li>
+        <li>She rescued a stray dog and named her Pixel.</li>
+        <li>She loves playing chess because it reminds her of solving coding problems.</li>
+        <li>She listens to lo-fi music while debugging her code.</li>
+        <li>Her dream is to start her own tech company that helps underprivileged kids learn programming.</li>
+        <li>She prefers learning from free online resources and open-source communities.</li>
+    </ul>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  
+    const tabcontent = document.querySelectorAll(".tabcontent");
+    tabcontent.forEach(tc => tc.classList.remove("active"));
+
+    const tablinks = document.querySelectorAll(".tablinks");
+    tablinks.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
+
+</body>
+</html>
